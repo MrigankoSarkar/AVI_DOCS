@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Architecture Overview" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://readthedocs.org/projects/all-india-villages-api/architecture/architecture_overview.html" />
+<meta property="og:site_name" content="All India Villages API Documentation" />
+<meta property="og:description" content="The repository contains two separate but related systems: All_India_Villages_API — a TypeScript-based Next.js application that exposes an API surface, dashboards, realtime events, and ETL orchestra..." />
+<meta property="og:image" content="https://raw.githubusercontent.com/USERNAME/REPO/main/docs/_static/opengraph.png" />
+<meta property="og:image:alt" content="All India Villages API Documentation" />
+<meta name="description" content="The repository contains two separate but related systems: All_India_Villages_API — a TypeScript-based Next.js application that exposes an API surface, dashboards, realtime events, and ETL orchestra..." />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Architecture Overview &mdash; All India Villages API Docs</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=4ebf8126"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../_static/togglebutton.js?v=b8b12719"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Flow Diagrams" href="architecture_data_flow.html" />
+    <link rel="prev" title="Architecture Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            All India Villages API Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Core Documentation Sections</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Architecture Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Architecture Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-boundaries">System Boundaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#core-components">Core Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technology-stack">Technology Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deployment-considerations">Deployment Considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="architecture_data_flow.html">Data Flow Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../developer-guide/index.html">Developer Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules/index.html">Module Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database.html">Database Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deployment/index.html">Deployment Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security/index.html">Security Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_improvements.html">Future Improvements</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">All India Villages API Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Architecture Documentation</a></li>
+      <li class="breadcrumb-item active">Architecture Overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/architecture/architecture_overview.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="architecture-overview">
+<h1>Architecture Overview<a class="headerlink" href="#architecture-overview" title="Link to this heading"></a></h1>
+<p>The repository contains two separate but related systems:</p>
+<ul class="simple">
+<li><p><cite>All_India_Villages_API</cite> — a TypeScript-based Next.js application that exposes an API surface, dashboards, realtime events, and ETL orchestration.</p></li>
+<li><p><cite>avi-etl-pipeline</cite> — a Python Flask service that cleans, validates, and ingests MDDS-style data into PostgreSQL.</p></li>
+</ul>
+<section id="system-boundaries">
+<h2>System Boundaries<a class="headerlink" href="#system-boundaries" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The Next.js application is responsible for frontend routing, secure API endpoints, analytics, and Redis-backed operational helpers.</p></li>
+<li><p>The Python ETL service is responsible for dataset ingestion and raw data cleaning.</p></li>
+</ul>
+</section>
+<section id="core-components">
+<h2>Core Components<a class="headerlink" href="#core-components" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>src/lib/env.ts</cite> — environment validation and Neon URL hardening.</p></li>
+<li><p><cite>src/lib/drizzle.ts</cite> — Postgres client initialization and schema binding.</p></li>
+<li><p><cite>src/lib/schema.ts</cite> — Drizzle table definitions for identity, geography, analytics, and API keys.</p></li>
+<li><p><cite>src/lib/geo-service.ts</cite> — hierarchical geography access and caching.</p></li>
+<li><p><cite>src/lib/etl/validator.ts</cite> — strict dataset validation of MDDS rows.</p></li>
+<li><p><cite>src/lib/etl/uploader.ts</cite> — transactional ingestion using Drizzle.</p></li>
+<li><p><cite>src/lib/queue/etl-queue.ts</cite> and <cite>src/lib/queue/etl-worker.ts</cite> — BullMQ job scheduling and background processing.</p></li>
+<li><p><cite>pages/api/socket.ts</cite> — Socket.IO server bootstrap.</p></li>
+<li><p><cite>avi-etl-pipeline/app.py</cite> — ETL Flask application with <cite>/upload</cite> and <cite>/upload-to-db</cite> routes.</p></li>
+</ul>
+</section>
+<section id="technology-stack">
+<h2>Technology Stack<a class="headerlink" href="#technology-stack" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Next.js 15 App Router</p></li>
+<li><p>TypeScript</p></li>
+<li><p>React 19</p></li>
+<li><p>Drizzle ORM for Postgres</p></li>
+<li><p>Redis for caching and queue coordination</p></li>
+<li><p>BullMQ for background ETL jobs</p></li>
+<li><p>Flask, pandas, SQLAlchemy for the Python ETL service</p></li>
+</ul>
+</section>
+<section id="deployment-considerations">
+<h2>Deployment Considerations<a class="headerlink" href="#deployment-considerations" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The Node app requires a host with raw HTTP and WebSocket support for Socket.IO.</p></li>
+<li><p>The Python ETL service should be placed behind secure network controls if exposed publicly.</p></li>
+<li><p>Shared data store assumptions: PostgreSQL compatible with Neon, and Redis for cache and queueing.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Architecture Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="architecture_data_flow.html" class="btn btn-neutral float-right" title="Data Flow Diagrams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
