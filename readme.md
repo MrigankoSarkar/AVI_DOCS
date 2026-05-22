@@ -7,7 +7,7 @@
 <p align="center">
 
   <!-- Build / Docs -->
-<a href="https://github.com/MrigankoSarkar/All_India_Villages_API/actions">
+<a href="https://github.com/MrigankoSarkar/All_India_Villages_API/">
   <img src="https://img.shields.io/github/actions/workflow/status/MrigankoSarkar/All_India_Villages_API/docs.yml?branch=main&label=docs&style=for-the-badge" alt="Docs Build">
 </a>
 
