@@ -8,7 +8,7 @@
 
   <!-- Build / Docs -->
   <a href="https://github.com/MrigankoSarkar/All_India_Villages_API">
-    <img src="https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/YOUR_REPO/docs.yml?label=docs&style=for-the-badge" alt="Docs Build">
+    <img src="https://img.shields.io/github/actions/workflow/status/MrigankoSarkar/All_India_Villages_API/docs.yml?label=docs&style=for-the-badge" alt="Docs Build">
   </a>
 
   <a href="https://readthedocs.org/">
