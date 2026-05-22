@@ -7,12 +7,12 @@
 <p align="center">
 
   <!-- Build / Docs -->
-  <a href="https://github.com/MrigankoSarkar/All_India_Villages_API">
-    <img src="https://img.shields.io/github/actions/workflow/status/MrigankoSarkar/All_India_Villages_API/docs.yml?label=docs&style=for-the-badge" alt="Docs Build">
-  </a>
+<a href="https://github.com/MrigankoSarkar/All_India_Villages_API/actions">
+  <img src="https://img.shields.io/github/actions/workflow/status/MrigankoSarkar/All_India_Villages_API/docs.yml?branch=main&label=docs&style=for-the-badge" alt="Docs Build">
+</a>
 
-  <a href="https://readthedocs.org/">
-    <img src="https://img.shields.io/readthedocs/all-india-villages-api?style=for-the-badge" alt="Read the Docs">
+  <a href="https://avi-docs.readthedocs.io/">
+    <img src="https://img.shields.io/readthedocs/avi-docs?style=for-the-badge" alt="Read the Docs">
   </a>
 
   <!-- License -->
@@ -394,5 +394,3 @@ python app.py
 ## 5. Conclusion
 
 This documentation is based on a full codebase scan of the workspace. It captures the architecture, runtime behavior, data model, API surface, ETL processing, operational concerns, and recommended improvements for both the `All_India_Villages_API` and `avi-etl-pipeline` directories.
-
-
