@@ -6,32 +6,61 @@
 
 <p align="center">
 
-  <!-- Build / Docs -->
-<a href="https://github.com/MrigankoSarkar/All_India_Villages_API/">
-  <img src="https://img.shields.io/github/actions/workflow/status/MrigankoSarkar/All_India_Villages_API/docs.yml?branch=main&label=docs&style=for-the-badge" alt="Docs Build">
-</a>
-
-  <a href="https://avi-docs.readthedocs.io/">
+  <!-- Documentation -->
+  <a href="https://avi-docs.readthedocs.io/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/readthedocs/avi-docs?style=for-the-badge" alt="Read the Docs">
   </a>
 
   <!-- License -->
   <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/MrigankoSarkar/All_India_Villages_API?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License">
   </a>
 
-  <!-- Tech -->
-  <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" alt="Next.js">
+  <!-- Repo Stats -->
+  <img src="https://img.shields.io/github/stars/MrigankoSarkar/All_India_Villages_API?style=for-the-badge" alt="Stars">
 
-  <img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react" alt="React">
+  <img src="https://img.shields.io/github/forks/MrigankoSarkar/All_India_Villages_API?style=for-the-badge" alt="Forks">
 
-  <img src="https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript" alt="TypeScript">
+  <img src="https://img.shields.io/github/issues/MrigankoSarkar/All_India_Villages_API?style=for-the-badge" alt="Issues">
 
-  <img src="https://img.shields.io/badge/PostgreSQL-16-blue?style=for-the-badge&logo=postgresql" alt="PostgreSQL">
+</p>
 
-  <img src="https://img.shields.io/badge/Redis-7-red?style=for-the-badge&logo=redis" alt="Redis">
+---
 
-  <img src="https://img.shields.io/badge/Python-3.11-yellow?style=for-the-badge&logo=python" alt="Python">
+## Deployments
+
+
+<p align="center">
+
+  <!-- Main Website -->
+  <a href="https://all-india-villages-api-lyart.vercel.app" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Live_Website-All_India_Villages_API-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Website">
+  </a>
+
+  <!-- ETL Pipeline Website -->
+  <a href="https://avi-etl-pipeline.onrender.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/ETL_Pipeline_Website-Cloud_Hosting-5A67D8?style=for-the-badge&logo=render&logoColor=white" alt="Render">
+  </a>
+
+  <!-- Neon -->
+  <a href="https://neon.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Neon-Serverless_Postgres-00E599?style=for-the-badge&logo=neon&logoColor=black" alt="Neon">
+  </a>
+
+  <!-- Vercel -->
+  <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Vercel-Deployment-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+  </a>
+
+  <!-- Upstash -->
+  <a href="https://upstash.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Upstash-Redis-00C98D?style=for-the-badge&logo=upstash&logoColor=white" alt="Upstash">
+  </a>
+
+  <!-- Render -->
+  <a href="https://render.com/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Render-Cloud_Hosting-5A67D8?style=for-the-badge&logo=render&logoColor=white" alt="Render">
+  </a>
 
 </p>
 
@@ -393,4 +422,32 @@ python app.py
 
 ## 5. Conclusion
 
-This documentation is based on a full codebase scan of the workspace. It captures the architecture, runtime behavior, data model, API surface, ETL processing, operational concerns, and recommended improvements for both the `All_India_Villages_API` and `avi-etl-pipeline` directories.
+This documentation is based on a full codebase of both All India Villages API Project and ETL Pipeline. It captures the architecture, runtime behavior, data model, API surface, ETL processing, operational concerns, and recommended improvements for both the `All_India_Villages_API` and `avi-etl-pipeline` directories.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Author
+
+Developed and maintained by **Mriganko Sarkar**.
+
+---
+
+## Maintainers
+
+Maintained by the All India Villages API contributors.
+
+For enterprise integrations, ETL workflows, collaboration, or infrastructure support, contact via LinkedIn or email above.
+
+---
+
+## Documentation
+
+Full documentation is available at: [ReadTheDocs](https://avi-docs.readthedocs.io/)
